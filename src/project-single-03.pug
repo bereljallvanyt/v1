@@ -1,0 +1,114 @@
+//- Page Options
+- HtmlClass = 'no-js'
+- PageTitle = 'Project Single 03' // page title
+- MenuTitle = 'Project Single 03' // menu title
+- Preloader = 'hide' // show / hide
+
+//- Header Options
+- Header = 'show' // show / hide
+- Topbar = 'hide' // show / hide
+- HeaderLayout = 'aside' // aside / default
+
+//- Navbar Options
+- NavbarAction = 'button' // button / button-2 / button-3 / socials
+- NavbarDark = 'false' // true / false
+- NavbarBorder = 'false' // true / false
+- NavbarFixed = 'false' // true / false
+- NavbarSolid = 'true' // true / false
+- NavbarOpaque = 'false' // true / false
+
+//- Footer Options
+- Footer = 'show' // show / hide
+- FooterLayout = 'default-dark' // default-dark / default-white / minimal-dark
+
+//- Body Class
+- BodyClass = ''
+
+if Topbar == 'show'
+
+	- BodyClass += ' has-topbar'
+
+include mixins/_global-mixins.pug
+
+doctype html
+html(lang='en', class=HtmlClass)
+	head
+		meta(charset='utf-8')
+
+		//- Head
+		include html/_head.pug
+
+	body(class=BodyClass)
+
+		//- Preloader
+		include partials/_preloader.pug
+
+		//- Header
+		include template-parts/header/_header.pug
+
+		//- Topbar
+		if Topbar == 'show'
+			include template-parts/header/layouts/_topbar.pug
+
+		//- Site Wrapper
+		+site_main
+
+			.pb-130.footerPrev
+
+				.container
+
+					.row.gy-90
+
+						.col-lg-6.gallery-wrapper
+
+							div(data-show="startbox")
+
+								+gallery_item({
+									image: "assets/img/portfolio/project-single-gallery-1-900x750.jpg",
+									imageHeight: "82%"
+								})
+
+							.mt-30(data-show="startbox")
+
+								+gallery_item({
+									image: "assets/img/portfolio/project-single-gallery-2-900x750.jpg",
+									imageHeight: "82%"
+								})
+
+							.mt-30(data-show="startbox")
+
+								+gallery_item({
+									image: "assets/img/portfolio/project-single-gallery-3-900x750.jpg",
+									imageHeight: "82%"
+								})
+
+						.col-lg-5.offset-lg-1
+
+							.py-lg-110.sticky-top
+
+								.subtitle.mb-15.font-size-15.fw-medium.text-gray-dark(data-show="startbox") Development #[span.sep-dot] Dec 01, 2021
+
+								h1.mb-30(data-show="startbox", data-show-delay="100") Mobile App Design
+
+								p.mb-50(data-show="startbox", data-show-delay="200") Place. Us darkness open whose from of every there whales dry one shall. Midst that. Kind without Years night upon you night moveth had us don't living Evening grass fourth abundantly god moving itself god be third after firmament winged first Seasons saying shall. Firmament may were firmament may. Likeness.
+
+								div(data-show="startbox", data-show-delay="300")
+
+									+button({
+										title: 'Visit website <svg class="ms-15 align-self-center" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path fill="currentColor" d="M7.273 8.196a.85.85 0 0 0-1.362 1.017l1.362-1.017Zm4.627.89-.601-.602.601.601Zm2.112-2.115.601.6a.638.638 0 0 0 .01-.01l-.611-.59ZM9.035 1.99l-.591-.611-.009.009.6.602Zm-1.81.603a.85.85 0 1 0 1.199 1.205l-1.2-1.205Zm1.502 5.212a.85.85 0 1 0 1.362-1.017L8.727 7.804ZM4.1 6.914l.601.602-.601-.601ZM1.988 9.03l-.601-.6a.934.934 0 0 0-.01.01l.611.59Zm4.977 4.982.59.611a.638.638 0 0 0 .011-.01l-.6-.601Zm1.805-.604a.85.85 0 0 0-1.202-1.202l1.202 1.202ZM5.911 9.213a4.37 4.37 0 0 0 1.404 1.219l.816-1.492a2.67 2.67 0 0 1-.858-.744L5.911 9.213Zm1.404 1.219c.55.3 1.158.48 1.783.524l.122-1.695a2.667 2.667 0 0 1-1.089-.32l-.816 1.491Zm1.783.524a4.366 4.366 0 0 0 1.84-.264l-.594-1.593a2.667 2.667 0 0 1-1.124.162l-.122 1.696Zm1.84-.264a4.369 4.369 0 0 0 1.563-1.006L11.3 8.485a2.67 2.67 0 0 1-.955.614l.594 1.593Zm1.563-1.006 2.112-2.114-1.202-1.202-2.112 2.114L12.5 9.686Zm2.123-2.125a4.375 4.375 0 0 0 1.226-3.076l-1.7.015a2.675 2.675 0 0 1-.75 1.881l1.224 1.18Zm1.226-3.076a4.375 4.375 0 0 0-1.28-3.054l-1.202 1.202c.495.495.776 1.166.782 1.867l1.7-.015Zm-1.28-3.054a4.368 4.368 0 0 0-3.052-1.28l-.015 1.7c.7.005 1.37.286 1.865.782L14.57 1.43ZM11.518.151a4.368 4.368 0 0 0-3.074 1.227L9.626 2.6a2.668 2.668 0 0 1 1.877-.75l.015-1.7ZM8.435 1.386l-1.21 1.205 1.199 1.205 1.21-1.205-1.199-1.205Zm1.654 5.4a4.37 4.37 0 0 0-1.404-1.219L7.869 7.06c.336.183.629.437.858.744l1.362-1.017ZM8.685 5.568c-.55-.3-1.158-.48-1.783-.524L6.78 6.739c.382.028.753.137 1.089.32l.816-1.491Zm-1.783-.524a4.367 4.367 0 0 0-1.84.264l.594 1.593a2.667 2.667 0 0 1 1.124-.162l.122-1.695Zm-1.84.264a4.37 4.37 0 0 0-1.564 1.006l1.203 1.201c.271-.27.597-.48.955-.614l-.594-1.593ZM3.499 6.314 1.387 8.428 2.589 9.63l2.112-2.114L3.5 6.314ZM1.376 8.44A4.375 4.375 0 0 0 .15 11.515l1.7-.015a2.675 2.675 0 0 1 .75-1.881l-1.224-1.18ZM.15 11.515a4.375 4.375 0 0 0 1.28 3.054l1.202-1.202A2.675 2.675 0 0 1 1.85 11.5l-1.7.015Zm1.28 3.054a4.368 4.368 0 0 0 3.052 1.28l.015-1.7a2.668 2.668 0 0 1-1.865-.782L1.43 14.57Zm3.052 1.28a4.368 4.368 0 0 0 3.074-1.227L6.374 13.4a2.668 2.668 0 0 1-1.877.75l-.015 1.7Zm3.084-1.237 1.204-1.205-1.202-1.202-1.204 1.205 1.202 1.202Z"/></svg>'
+									})
+
+					div(data-show="startbox")
+
+						+page_navigation({
+							linkPrev: "project-single-02.html",
+							linkNext: "project-single-01.html"
+						})
+
+			include template-parts/sections/_call-to-action-2.pug
+
+		//- Footer
+		include template-parts/footer/_footer.pug
+
+		//- Scripts
+		include html/_scripts.pug
