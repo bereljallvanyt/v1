@@ -42936,16 +42936,16 @@ span.highlight::after {
 -------------------------------------------- */
 ::-moz-selection {
   color: #FFFFFF;
-  background-color: #F01F4B;
+  background-color: black;
 }
 ::selection {
   color: #FFFFFF;
-  background-color: #F01F4B;
+  background-color: black;
 }
 
 ::-moz-selection {
   color: #FFFFFF;
-  background-color: #F01F4B;
+  background-color: black;
 }
 
 /* BODY
