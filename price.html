@@ -117,7 +117,7 @@
                         <h2 class="mb-45" data-show="startbox">Ajánlatkérés</h2>
                         <h4 class="mb-30" data-show="startbox" data-show-delay="100">Árajánlat készítéséhez az alábbi adatok megadása szükséges</h4>
                         <p class="mb-40" data-show="startbox" data-show-delay="200">– Cég név
-– Ajánlat kérô neve<br>
+– Ajánlat kérő neve<br>
 – E-mail cím<br>
 – Telefonszám<br>
 – Épület címe<br>
@@ -126,13 +126,13 @@
 – Munkavégzés típusa (építés, szerelés, felújjítás, tatarozás, restaurálás stb)<br>
 – Állványzat össz. mennyisége (m2)<br>
 – Bérlés kezdete<br>
-– Bérlés idôtartama (nap)<br>
+– Bérlés időtartama (nap)<br>
 – Fizetési mód (banki utalás, készpénz)</p>
-                        <h4 class="mb-30" data-show="startbox" data-show-delay="100">A végleges ajánlatot befolyásoló tényezôk</h4>
-                        <p class="mb-40" data-show="startbox" data-show-delay="200">– Oda-vissza szállítás (távolság, behajtási engedély, útdíj, egyébb nehezítô körülmények a helyszínen)<br>
-– Építés-bontás munkadíja (komplexítás, távolság, bélet idôtartama, bérelt állványzat mennyisége)<br>
-– Porvédô háló<br>
-– Védô ponyva<br>
+                        <h4 class="mb-30" data-show="startbox" data-show-delay="100">A végleges ajánlatot befolyásoló tényezők</h4>
+                        <p class="mb-40" data-show="startbox" data-show-delay="200">– Oda-vissza szállítás (távolság, behajtási engedély, útdíj, egyébb nehezítő körülmények a helyszínen)<br>
+– Építés-bontás munkadíja (komplexítás, távolság, bélet időtartama, bérelt állványzat mennyisége)<br>
+– Porvédő háló<br>
+– Védő ponyva<br>
 – Érintésvédelem kiépítése (EPH)<br>
 – Statikai tervezés</p>
                         <div data-show="startbox" data-show-delay="300">
@@ -148,7 +148,7 @@
 3hónap – 6 hónap<br>70 ft + áfa /m2 /nap<br><br>
 9 hónap – 12 hónap<br>60 ft + áfa /m2 /nap<br><br>
 Kiszállás + felmérés<br>25.000 ft + áfa<br>
-<span style="font-size: 12px; line-height: 80%">(Szerzôdés esetén a kiszállási díj<br>
+<span style="font-size: 12px; line-height: 80%">(Szerződés esetén a kiszállási díj<br>
 levonásra kerül a bérlési díjból)</span><br><br>
 Állvány építés<br>1000 ft + áfa /m2<br><br>
 Állvány bontás<br>1000 ft + áfa /m2</p><br>
@@ -200,30 +200,37 @@ levonásra kerül a bérlési díjból)</span><br><br>
                 </div>
             </div>
         </div>
-        <div class="pt-120 pb-130">
-            <div class="container overflow-hidden">
-                <div class="row gy-50 gx-100">
-                    <div class="col-lg-8" data-show="startbox" data-show-delay="300">
+        <div class="pt-120 pb-130" id="next">
+            <div class="container">
+                <div class="row gy-100">
+                    <div class="col-lg-7">
+                        <h2 class="mb-45" data-show="startbox">Kalkulátor</h2>
                         <!-- Form-->
                         <form>
-                            <div class="row gy-40">
-                                <div class="col-12 col-md-6"><input class="form-control" type="text" placeholder="Neved *"></div>
-                                <div class="col-12 col-md-6"><input class="form-control" type="email" placeholder="Email címed *"></div>
-                                <div class="col-12 col-md-6"><input class="form-control" type="tel" placeholder="Telefonszámod *"></div>
-                                <div class="col-12 col-md-6"><input class="form-control" type="text" placeholder="Céged neve *"></div>
-                                <div class="col-12 mb-10"><textarea class="form-control" rows="2" placeholder="Message *"></textarea></div>
-                                <div class="col-12 col-md-6 col-lg-4">
-                                    <div class="form-check"><input class="form-check-input" type="checkbox" value="" id="personalData"><label class="form-check-label" for="personalData">Hozzájárulok az adataim cégen belüli felhasználásához *</label></div>
-                                </div>
-                                <div class="col-12 col-lg-3 text-start text-lg-end">
-                                    <!-- Button--><button class="btn btn-accent-1">Küldés</button>
-                                </div>
+                            <div class="gy-40" style="margin-left: 25px">
+                                <label for="mennyiseg" style="margin-bottom: 15px; margin-top: 15px; font-size: 15px">Mennyiség (m2)</label>
+                                <div class="col-2"><input class="form-control" type="text" placeholder="pl. 100" style="color: darkgrey"></div>
+                                <label for="mennyiseg" style="margin-bottom: 15px; margin-top: 15px; font-size: 15px">Nap</label>
+                                <div class="col-2"><input class="form-control" type="text" placeholder="pl. 3"></div>
+                                <div class="form-group col-2">
+                                    <label for="exampleFormControlSelect1" style="margin-bottom: 15px; margin-top: 15px; font-size: 15px">Szolgáltatás</label>
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                      <option>Építés</option>
+                                      <option>Bontás</option>
+                                    </select>
+                                  </div>
+                                <label for="mennyiseg" style="margin-bottom: 15px; margin-top: 15px; font-size: 15px">Szállítási távolság (km)</label>
+                                <div class="col-2"><input class="form-control" type="text" placeholder="pl. 15"></div>
+                            <div class="col-12 col-lg-5" style="margin-left: 1px; padding-left: 1px; margin-top: 20px">
+                                    <!-- Button--><button class="btn btn-accent-1" style="margin-left: 0px">Számítás</button>
                             </div>
+                                </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+        
         <div class="pt-160 pb-100 bg-dark">
             <div class="container">
                 
