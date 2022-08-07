@@ -87,7 +87,7 @@
         }
 
         if (dataGrabCursor) {
-          conf.grabCursor = true;
+          conf.grabCursor = false;
         }
 
         if (dataAutoHeight) {
