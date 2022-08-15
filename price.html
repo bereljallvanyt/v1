@@ -183,42 +183,39 @@ levonásra kerül a bérlési díjból)</span><br><br>
                     <div class="col-lg-7">
                         <h2 class="mb-45" data-show="startbox">Kalkulátor</h2>
                         <!-- Form-->
-                        <form>
-                            <div style="margin-left: 25px">
-                                <label for="mennyiseg" style="margin-bottom: 15px; margin-top: 15px; font-size: 15px">Mennyiség (m2)</label>
-                                <div class="col-5"><input class="form-control" id="m" type="number" placeholder="pl. 100" style="font-weight: bold"></div>
-                                <label for="mennyiseg" style="margin-bottom: 15px; margin-top: 15px; font-size: 15px">Nap</label>
-                                <div class="col-2"><input class="form-control" id="d" type="number" placeholder="pl. 3" style="font-weight: bold"></div>
-                                <div class="form-group col-2">
-                                    <label for="exampleFormControlSelect1" style="margin-bottom: 15px; margin-top: 15px; font-size: 15px">Szolgáltatás</label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
-                                      <option>Építés</option>
-                                      <option>Bontás</option>
-                                    </select>
-                                  </div>
-                                <label for="mennyiseg" style="margin-bottom: 15px; margin-top: 15px; font-size: 15px">Szállítási távolság (km)</label>
-                                <div class="col-2"><input class="form-control" id="q" type="number" placeholder="pl. 15" style="font-weight: bold"></div>
-                                <div class="col-12 col-lg-5" style="margin-left: 1px; padding-left: 1px; margin-top: 20px">
-                                        <!-- Button--><button onClick="calculate()" class="btn btn-accent-1">Számítás</button>
-                                </div>
-                                <p id="sum"></p>
-                                <script>
-                                function calculate() {
-                                  const num1 = parseInt(document.getElementById("m").value);
-                                  const num2 = parseInt(document.getElementById("d").value);
-                                  const num3 = parseInt(document.getElementById("q").value);
-                                  let text;
-                                  const sum = num1 + num2 + num3;
-                                  if (isNaN(m) || isNaN(d) || isNaN(q)) {
+                        <p>Mennyiség (m2): <br>
+                            <input type="number" id="meters">
+                        </p>
+                        <p>Időtartam (Nap): <br>
+                            <input type="number" id="days">
+                        </p>
+
+                        Összesen: <p style="font-weight: bold" id="sum"></p>
+
+                        <button onclick="myFunction()" class="btn btn-accent-1">Számítás</button>
+
+                        <script>
+                        function myFunction() {
+                            const meters = parseInt(document.getElementById("meters").value);
+                            const days = parseInt(document.getElementById("days").value);
+                            
+                            let text;
+                            
+                            if (isNaN(meters) || isNaN(days)) {
                                     text = "Nem számadat lett megadva!";
-                                  } else {
-                                    text = sum;
-                                  }
-                                  document.getElementById("sum").innerHTML = text;
+                                } else {
+                                    if (days < 31){
+                                        text = (meters*days*80)+25000+(meters*2000);
+                                    }else if (days < 181 && days > 30) {
+                                        text = meters*days*70+25000+(meters*2000);
+                                    }else {
+                                        text = meters*days*60+25000+(meters*2000);
+                                    }
                                 }
-                                </script>
-                            </div>
-                        </form>
+                                document.getElementById("sum").innerHTML = text + " Ft";
+                            }
+                            
+                        </script>
                     </div>
                 </div>
             </div>
