@@ -190,7 +190,7 @@ levonásra kerül a bérlési díjból)</span><br><br>
                             <input type="number" id="days">
                         </p>
 
-                        Összesen: <p style="font-weight: bold" id="sum"></p>
+                        Összesen: <p style="font-weight: bold; font-size: 25px" id="sum">0 Ft</p>
 
                         <button onclick="myFunction()" class="btn btn-accent-1">Számítás</button>
 
@@ -212,7 +212,7 @@ levonásra kerül a bérlési díjból)</span><br><br>
                                         text = meters*days*60+25000+(meters*2000);
                                     }
                                 }
-                                document.getElementById("sum").innerHTML = text + " Ft";
+                                document.getElementById("sum").innerHTML = text.toLocaleString('hu-HU') + " Ft";
                             }
                             
                         </script>
